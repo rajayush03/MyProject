@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Doctors - HealthCare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-circle">HC</div>
+                    <span class="logo-text">HealthCare</span>
+                </a>
+            </div>
+
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-item"><span class="nav-icon home-icon"></span>Home</a>
+                <a href="doctors.html" class="nav-item active"><span class="nav-icon user-icon"></span>Find Doctors</a>
+                <a href="appointments.html" class="nav-item"><span class="nav-icon calendar-icon"></span>Appointments</a>
+                <a href="consultations.html" class="nav-item"><span class="nav-icon video-icon"></span>Video Consultations</a>
+            </nav>
+            <div class="auth-buttons desktop-only">
+                <button class="btn btn-ghost">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+        <span class="menu-icon"></span>
+      </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-item"><span class="nav-icon home-icon"></span>Home</a>
+                <a href="doctors.html" class="mobile-nav-item active"><span class="nav-icon user-icon"></span>Find Doctors</a>
+                <a href="appointments.html" class="mobile-nav-item"><span class="nav-icon calendar-icon"></span>Appointments</a>
+                <a href="consultations.html" class="mobile-nav-item"><span class="nav-icon video-icon"></span>Video Consultations</a>
+
+                <div class="mobile-auth">
+                    <button class="btn btn-outline btn-full">Login</button>
+                    <button class="btn btn-primary btn-full">Sign Up</button>
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="page-title">Find the Right Doctor</h1>
+                <p class="page-description">
+                    Browse our network of experienced healthcare professionals and specialists
+                </p>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-form">
+                        <div class="search-input-group">
+                            <input type="text" id="doctorSearch" placeholder="Search by name, specialty, or location" class="search-input">
+                            <button type="button" id="searchBtn" class="btn btn-primary">Search</button>
+                        </div>
+                        <div class="search-filters">
+                            <select id="specialtyFilter" class="filter-select">
+                <option value="">All Specialties</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Pediatrics">Pediatrics</option>
+                <option value="Orthopedics">Orthopedics</option>
+                <option value="Dermatology">Dermatology</option>
+                <option value="Psychiatry">Psychiatry</option>
+              </select>
+                            <select id="availabilityFilter" class="filter-select">
+                <option value="">Any Availability</option>
+                <option value="today">Available Today</option>
+                <option value="week">Available This Week</option>
+              </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors List Section -->
+        <section class="doctors-section">
+            <div class="container">
+                <div id="doctorsCount" class="doctors-count mb-4">Found 6 doctors</div>
+
+                <div class="doctors-grid" id="doctorsGrid">
+                    <!-- Doctor cards will be populated here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">HealthCare</h3>
+                    <p class="footer-description">
+                        Providing quality healthcare services for you and your family.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook-icon" aria-label="Facebook"></a>
+                        <a href="#" class="social-icon twitter-icon" aria-label="Twitter"></a>
+                        <a href="#" class="social-icon instagram-icon" aria-label="Instagram"></a>
+                        <a href="#" class="social-icon linkedin-icon" aria-label="LinkedIn"></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="doctors.html">Find Doctors</a></li>
+                        <li><a href="appointments.html">Appointments</a></li>
+                        <li><a href="consultations.html">Video Consultations</a></li>
+                        <li><a href="packages.html">Health Packages</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Emergency Care</a></li>
+                        <li><a href="#">Lab Tests</a></li>
+                        <li><a href="#">Medication Delivery</a></li>
+                        <li><a href="#">Health Insurance</a></li>
+                        <li><a href="#">Mental Health</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <address class="footer-contact">
+            <p>123 Medical Plaza, Suite 500</p>
+            <p>New York, NY 10001</p>
+            <p>Email: info@healthcare.com</p>
+            <p>Phone: (123) 456-7890</p>
+          </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 HealthCare. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Toggle chatbot">
+      <span class="chat-icon"></span>
+    </button>
+
+        <div class="chatbot-dialog" id="chatbotDialog">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <span class="chat-icon"></span>
+                    <span>HealthCare Assistant</span>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">
+          <span class="close-icon"></span>
+        </button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">
+                    <div class="message-bubble">
+                        Hi there! I'm HealthBot. How can I help you today?
+                        <div class="message-time">10:00 AM</div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="chatbot-input-container" id="chatbotForm">
+                <input type="text" id="chatbotInput" placeholder="Type your message..." class="chatbot-input">
+                <button type="submit" class="chatbot-send" aria-label="Send message">
+          <span class="send-icon"></span>
+        </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="doctors.js"></script>
+</body>
+
+</html>

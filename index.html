@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare - Medical Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-circle">HC</div>
+                    <span class="logo-text">HealthCare</span>
+                </a>
+            </div>
+
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-item active"><span class="nav-icon home-icon"></span>Home</a>
+                <a href="doctors.html" class="nav-item"><span class="nav-icon user-icon"></span>Find Doctors</a>
+                <a href="appointments.html" class="nav-item"><span class="nav-icon calendar-icon"></span>Appointments</a>
+                <a href="consultations.html" class="nav-item"><span class="nav-icon video-icon"></span>Video Consultations</a>
+
+            </nav>
+
+            <div class="auth-buttons desktop-only">
+                <button class="btn btn-ghost">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+        <span class="menu-icon"></span>
+      </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-item active"><span class="nav-icon home-icon"></span>Home</a>
+                <a href="doctors.html" class="mobile-nav-item"><span class="nav-icon user-icon"></span>Find Doctors</a>
+                <a href="appointments.html" class="mobile-nav-item"><span class="nav-icon calendar-icon"></span>Appointments</a>
+                <a href="consultations.html" class="mobile-nav-item"><span class="nav-icon video-icon"></span>Video Consultations</a>
+
+            </nav>
+            <div class="mobile-auth">
+                <button class="btn btn-outline btn-full">Login</button>
+                <button class="btn btn-primary btn-full">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="home-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Your Health, Our Priority</h1>
+                    <p class="hero-description">
+                        Experience quality healthcare with personalized appointments, video consultations, and comprehensive health packages.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="appointments.html" class="btn btn-primary btn-lg">Book Appointment</a>
+                        <a href="consultations.html" class="btn btn-outline btn-lg">Video Consultation</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://placehold.co/600x400/00afaf/white?text=Healthcare" alt="Doctor with patient">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-description">
+                        We offer a range of medical services to meet your healthcare needs
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon doctor-icon"></div>
+                        <h3 class="service-title">Find Doctors</h3>
+                        <p class="service-description">
+                            Search and find the best healthcare professionals for your needs.
+                        </p>
+                        <a href="doctors.html" class="service-link">Find a Doctor</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon appointment-icon"></div>
+                        <h3 class="service-title">Book Appointments</h3>
+                        <p class="service-description">
+                            Schedule appointments with our doctors at your convenience.
+                        </p>
+                        <a href="appointments.html" class="service-link">Book Now</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon video-chat-icon"></div>
+                        <h3 class="service-title">Video Consultations</h3>
+                        <p class="service-description">
+                            Consult with healthcare professionals from the comfort of your home.
+                        </p>
+                        <a href="consultations.html" class="service-link">Start Consultation</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose Us</h2>
+                    <p class="section-description">
+                        We're committed to providing the best healthcare experience
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon qualified-icon"></div>
+                        <h3 class="feature-title">Qualified Doctors</h3>
+                        <p class="feature-description">
+                            Our team consists of experienced and certified healthcare professionals.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon emergency-icon"></div>
+                        <h3 class="feature-title">Emergency Care</h3>
+                        <p class="feature-description">
+                            We provide 24/7 emergency support for urgent medical needs.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon tech-icon"></div>
+                        <h3 class="feature-title">Advanced Technology</h3>
+                        <p class="feature-description">
+                            We use the latest medical technology for accurate diagnosis and treatment.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon patient-icon"></div>
+                        <h3 class="feature-title">Patient-Centered</h3>
+                        <p class="feature-description">
+                            Our approach is focused on your individual needs and comfort.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon affordable-icon"></div>
+                        <h3 class="feature-title">Affordable Pricing</h3>
+                        <p class="feature-description">
+                            Quality healthcare services at reasonable and transparent prices.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon friendly-icon"></div>
+                        <h3 class="feature-title">Friendly Staff</h3>
+                        <p class="feature-description">
+                            Our courteous staff ensures a comfortable and caring environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Patients Say</h2>
+                    <p class="section-description">
+                        Hear from our satisfied patients about their healthcare experience
+                    </p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "The doctors here are very professional and caring. They took the time to listen to my concerns and provided excellent care."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Sarah Johnson</h4>
+                                <p class="testimonial-role">Patient</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "The video consultation service saved me so much time. I received the same quality care from the comfort of my home."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Michael Chen">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Michael Chen</h4>
+                                <p class="testimonial-role">Patient</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "The health package I subscribed to has been incredible value. Regular check-ups and preventive care have kept me healthy."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Lisa Patel">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Lisa Patel</h4>
+                                <p class="testimonial-role">Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to prioritize your health?</h2>
+                    <p class="cta-description">
+                        Book an appointment today or explore our services to start your journey towards better health.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="appointments.html" class="btn btn-primary btn-lg">Book Appointment</a>
+                        <a href="doctors.html" class="btn btn-outline btn-lg">Find a Doctor</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">HealthCare</h3>
+                    <p class="footer-description">
+                        Providing quality healthcare services for you and your family.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook-icon" aria-label="Facebook"></a>
+                        <a href="#" class="social-icon twitter-icon" aria-label="Twitter"></a>
+                        <a href="#" class="social-icon instagram-icon" aria-label="Instagram"></a>
+                        <a href="#" class="social-icon linkedin-icon" aria-label="LinkedIn"></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="doctors.html">Find Doctors</a></li>
+                        <li><a href="appointments.html">Appointments</a></li>
+                        <li><a href="consultations.html">Video Consultations</a></li>
+                        <li><a href="packages.html">Health Packages</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Emergency Care</a></li>
+                        <li><a href="#">Lab Tests</a></li>
+                        <li><a href="#">Medication Delivery</a></li>
+                        <li><a href="#">Health Insurance</a></li>
+                        <li><a href="#">Mental Health</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <address class="footer-contact">
+            <p>123 Medical Plaza, Suite 500</p>
+            <p>New York, NY 10001</p>
+            <p>Email: info@healthcare.com</p>
+            <p>Phone: (123) 456-7890</p>
+          </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 HealthCare. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Toggle chatbot">
+      <span class="chat-icon"></span>
+    </button>
+
+        <div class="chatbot-dialog" id="chatbotDialog">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <span class="chat-icon"></span>
+                    <span>HealthCare Assistant</span>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">
+          <span class="close-icon"></span>
+        </button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">
+                    <div class="message-bubble">
+                        Hi there! I'm HealthBot. How can I help you today?
+                        <div class="message-time">10:00 AM</div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="chatbot-input-container" id="chatbotForm">
+                <input type="text" id="chatbotInput" placeholder="Type your message..." class="chatbot-input">
+                <button type="submit" class="chatbot-send" aria-label="Send message">
+          <span class="send-icon"></span>
+        </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

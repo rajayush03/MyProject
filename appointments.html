@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - HealthCare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-circle">HC</div>
+                    <span class="logo-text">HealthCare</span>
+                </a>
+            </div>
+
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-item"><span class="nav-icon home-icon"></span>Home</a>
+                <a href="doctors.html" class="nav-item"><span class="nav-icon user-icon"></span>Find Doctors</a>
+                <a href="appointments.html" class="nav-item active"><span class="nav-icon calendar-icon"></span>Appointments</a>
+                <a href="consultations.html" class="nav-item"><span class="nav-icon video-icon"></span>Video Consultations</a>
+
+            </nav>
+
+            <div class="auth-buttons desktop-only">
+                <button class="btn btn-ghost">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+        <span class="menu-icon"></span>
+      </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-item"><span class="nav-icon home-icon"></span>Home</a>
+                <a href="doctors.html" class="mobile-nav-item"><span class="nav-icon user-icon"></span>Find Doctors</a>
+                <a href="appointments.html" class="mobile-nav-item active"><span class="nav-icon calendar-icon"></span>Appointments</a>
+                <a href="consultations.html" class="mobile-nav-item"><span class="nav-icon video-icon"></span>Video Consultations</a>
+                <a href="packages.html" class="mobile-nav-item"><span class="nav-icon package-icon"></span>Health Packages</a>
+            </nav>
+            <div class="mobile-auth">
+                <button class="btn btn-outline btn-full">Login</button>
+                <button class="btn btn-primary btn-full">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="page-title">Book an Appointment</h1>
+                <p class="page-description">
+                    Schedule an in-person appointment with one of our healthcare professionals.
+                </p>
+            </div>
+        </section>
+
+        <!-- Appointment Form Section -->
+
+        <section class="appointment-section">
+           
+            
+            <div class="container">
+                <form action = "http://localhost/NIharika_backend/connect.php" method = "post"  id="appointmentForm">
+                <div class="appointment-grid">
+                    
+                    <div class="appointment-form-container">
+                       
+                         
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">Appointment Details</h2>
+                               
+                            </div>
+                            <div class="card-content">
+                                <div id="appointmentSuccess" class="appointment-success hidden">
+                                    <div class="success-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                                    </div>
+                                    <h3 class="success-title">Appointment Confirmed!</h3>
+                                    <p class="success-message">
+                                        We've sent a confirmation email with all the details.
+                                    </p>
+                                    <div class="success-actions">
+                                        <button type="button" class="btn btn-primary" id="bookAnotherBtn">Book Another</button>
+                                        <button type="button" class="btn btn-outline" id="returnHomeBtn">Return Home</button>
+                                    </div>
+                                </div>
+                               
+                                <form id="appointmentForm" class="appointment-form">
+                                    
+                                    <div class="form-row">
+                                        
+                                        <div class="form-group">
+                                            <label for="fullName">Full Name</label>
+                                            <input type="text" id="fullName" placeholder="Enter your full name" name="fullName" required >
+                                            <div class="form-error" id="fullNameError"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" placeholder="Enter your email"  name="email" required >
+                                            <div class="form-error" id="emailError"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="tel" id="phone" placeholder="Enter your phone number" name="phone" required >
+                                            <div class="form-error" id="phoneError"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="doctor">Select Doctor</label>
+                                            <select id="doctor" name="doctor" required>
+                        <option value="" disabled selected>Select a doctor</option>
+                        <option value="1">Dr. Sarah Johnson - Cardiology</option>
+                        <option value="2">Dr. Michael Chen - Neurology</option>
+                        <option value="3">Dr. Emily Rodriguez - Pediatrics</option>
+                        <option value="4">Dr. James Wilson - Orthopedics</option>
+                        <option value="5">Dr. Lisa Patel - Dermatology</option>
+                        <option value="6">Dr. Robert Kim - Psychiatry</option>
+                      </select>
+                                            <div class="form-error" id="doctorError"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="appointmentDate">Appointment Date</label>
+                                            <input type="date" id="appointmentDate" required name="appointmentDate">
+                                            <div class="form-error" id="dateError"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="appointmentTime">Appointment Time</label>
+                                            <select id="appointmentTime" name="appointmentTime" required disabled>
+                        <option value="" disabled selected>Select a time slot</option>
+                        <option value="9:00 AM">9:00 AM</option>
+                        <option value="9:30 AM">9:30 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="10:30 AM">10:30 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="11:30 AM">11:30 AM</option>
+                        <option value="1:00 PM">1:00 PM</option>
+                        <option value="1:30 PM">1:30 PM</option>
+                        <option value="2:00 PM">2:00 PM</option>
+                        <option value="2:30 PM">2:30 PM</option>
+                        <option value="3:00 PM">3:00 PM</option>
+                        <option value="3:30 PM">3:30 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                        <option value="4:30 PM">4:30 PM</option>
+                      </select>
+                                            <div class="form-error" id="timeError"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="reason">Reason for Visit</label>
+                                        <textarea id="reason" placeholder="Please describe your symptoms or reason for appointment" name="reason" required></textarea>
+                                        <div class="form-error" id="reasonError"></div>
+                                    </div>
+                                   
+
+                                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Schedule Appointment</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="appointment-info">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">Appointment Information</h2>
+                            </div>
+                            <div class="card-content">
+                                <div class="info-section">
+                                    <h3 class="info-title">Office Hours</h3>
+                                    <ul class="hours-list">
+                                        <li><span>Monday - Friday</span><span>9:00 AM - 5:00 PM</span></li>
+                                        <li><span>Saturday</span><span>Closed</span></li>
+                                        <li><span>Sunday</span><span>Closed</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-section">
+                                    <h3 class="info-title">What to Bring</h3>
+                                    <ul class="info-list">
+                                        <li>Photo ID</li>
+                                        <li>Insurance card</li>
+                                        <li>Medical history</li>
+                                        <li>List of current medications</li>
+                                        <li>Previous test results (if applicable)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-section">
+                                    <h3 class="info-title">Important Notes</h3>
+                                    <ul class="info-list">
+                                        <li>Please arrive 15 minutes before your appointment</li>
+                                        <li>Cancellations require 24-hour notice</li>
+                                        <li>Masks are required in our facilities</li>
+                                    </ul>
+                                </div>
+
+                                <div class="appointment-duration">
+                                    <span class="clock-icon"></span>
+                                    <span>Appointments last approximately 30 minutes</span>
+                                </div>
+                            
+                            </div>
+                       
+                        </div>
+                    
+                    </div>
+                </form>
+                </div>
+            <!-- </form> -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">HealthCare</h3>
+                    <p class="footer-description">
+                        Providing quality healthcare services for you and your family.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook-icon" aria-label="Facebook"></a>
+                        <a href="#" class="social-icon twitter-icon" aria-label="Twitter"></a>
+                        <a href="#" class="social-icon instagram-icon" aria-label="Instagram"></a>
+                        <a href="#" class="social-icon linkedin-icon" aria-label="LinkedIn"></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="doctors.html">Find Doctors</a></li>
+                        <li><a href="appointments.html">Appointments</a></li>
+                        <li><a href="consultations.html">Video Consultations</a></li>
+                        <li><a href="packages.html">Health Packages</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Emergency Care</a></li>
+                        <li><a href="#">Lab Tests</a></li>
+                        <li><a href="#">Medication Delivery</a></li>
+                        <li><a href="#">Health Insurance</a></li>
+                        <li><a href="#">Mental Health</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <address class="footer-contact">
+            <p>123 Medical Plaza, Suite 500</p>
+            <p>New York, NY 10001</p>
+            <p>Email: info@healthcare.com</p>
+            <p>Phone: (123) 456-7890</p>
+          </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 HealthCare. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Toggle chatbot">
+      <span class="chat-icon"></span>
+    </button>
+
+        <div class="chatbot-dialog" id="chatbotDialog">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <span class="chat-icon"></span>
+                    <span>HealthCare Assistant</span>
+                </div>
+                <button class="chatbot-close" id="chatbotClose" title="Close Chatbot">
+          <span class="close-icon"></span>
+        </button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">
+                    <div class="message-bubble">
+                        Hi there! I'm HealthBot. How can I help you today?
+                        <div class="message-time">10:00 AM</div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="chatbot-input-container" id="chatbotForm">
+                <input type="text" id="chatbotInput" placeholder="Type your message..." class="chatbot-input">
+                <button type="submit" class="chatbot-send" aria-label="Send message">
+          <span class="send-icon"></span>
+        </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="appointments.js"></script>
+</body>
+
+</html>
